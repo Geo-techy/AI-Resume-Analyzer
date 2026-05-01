@@ -28,3 +28,81 @@ ai-resume-analyzer/
 ├── .env                  # Environment variables (API keys) - Ignored by Git
 └── .gitignore            # Git ignore rules
 
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YourUsername/ai-resume-analyzer.git
+cd ai-resume-analyzer
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configure API Key
+
+1. Create an account on Groq and generate an API key.
+2. Create a `.env` file in the root directory of the project.
+3. Add the following line to the `.env` file:
+
+```env
+GROQ_API_KEY=gsk_your_actual_api_key_here
+```
+
+---
+
+#  Running the Application
+
+This project uses a **decoupled architecture**, so the backend and frontend must be run in **two separate terminal windows**.
+
+## Start the Backend
+
+Open a terminal inside the project folder and run:
+
+```bash
+uvicorn backend:app --reload
+```
+
+Wait until you see:
+
+```bash
+Application startup complete
+```
+
+---
+
+## Start the Frontend
+
+Open a second terminal in the same project folder and run:
+
+```bash
+streamlit run frontend.py
+```
+
+The application interface will automatically open in your default web browser.
+
+---
+
+# How to Use
+
+1. **Upload Resume**
+   Upload your resume in **PDF format**.
+
+2. **Paste Job Description**
+   Enter the target job description into the provided text area.
+
+3. **Analyze Resume**
+   Click the **Analyze** button to generate:
+
+   * ATS compatibility score
+   * Skill match analysis
+   * AI-generated feedback and suggestions
+
+4. **Download Report**
+   Save the generated analysis report locally using the **Download Report** button.
+
+
