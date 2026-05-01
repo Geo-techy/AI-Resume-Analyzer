@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+streamlit
+requests
+pdfminer.six
+sentence-transformers
+scikit-learn
+groq
+python-dotenv
